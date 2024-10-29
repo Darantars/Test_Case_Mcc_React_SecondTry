@@ -1,0 +1,12 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry/obj/Debug
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry/bin
+/Test_Case_Mcc_React_SecondTry/.vs/Test_Case_Mcc_React_SecondTry
+/.vs
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry/.vs/test-case-mcc/v17
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry.sln
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry/.vs/VSWorkspaceState.json
+/Test_Case_Mcc_React_SecondTry/Test_Case_Mcc_React_SecondTry/.vs/slnx.sqlite

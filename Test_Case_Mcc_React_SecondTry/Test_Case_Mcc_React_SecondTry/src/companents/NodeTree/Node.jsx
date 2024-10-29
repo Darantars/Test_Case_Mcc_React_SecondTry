@@ -1,29 +1,34 @@
-// src/Node.jsx
-import React, { useState } from 'react';
+import React from 'react';
+import '../../styles/TreeViewStyle.css';
 
-function Node({ node, onSelect }) {
-    const { children, label } = node;
-    const [showChildren, setShowChildren] = useState(false);
-
-    const handleClick = () => {
-        setShowChildren(!showChildren);
+const NodeTree = ({ nodes, onSelect, selectedNode }) => {
+    const handleNodeClick = (node) => {
         onSelect(node);
     };
 
-    return (
-        <>
-            <div onClick={handleClick} style={{ marginBottom: "10px", cursor: 'pointer' }}>
-                <span>{label}</span>
-            </div>
-            {children && children.length > 0 && (
-                <ul style={{ paddingLeft: "10px", borderLeft: "1px solid black" }}>
-                    {showChildren && children.map((child) => (
-                        <Node node={child} key={child.key} onSelect={onSelect} />
-                    ))}
-                </ul>
-            )}
-        </>
-    );
-}
+    const renderNode = (node) => {
+        const isSelected = selectedNode && selectedNode.key === node.key;
+        const hasChildren = node.children && node.children.length > 0;
 
-export default Node;
+        return (
+            <div
+                key={node.key}
+                className={`node ${isSelected ? 'selected' : ''}`}
+                
+            >
+                <span className="node-label"
+                    onClick={() => handleNodeClick(node)}>{node.label}</span>
+                {hasChildren && <span className="node-children-icon">has children</span>}
+                {node.children && node.children.map(renderNode)}
+            </div>
+        );
+    };
+
+    return (
+        <div className="tree-view">
+            {nodes.map(renderNode)}
+        </div>
+    );
+};
+
+export default NodeTree;
