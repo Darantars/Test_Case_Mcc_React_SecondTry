@@ -21,13 +21,13 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/your-username/tree-view-project.git
+    https://github.com/Darantars/Test_Case_Mcc_React_SecondTry.git
     ```
 
 2. Перейдите в директорию проекта:
 
     ```bash
-    cd tree-view-project
+    cd Test_Case_Mcc_React_SecondTry
     ```
 
 3. Установите зависимости:
